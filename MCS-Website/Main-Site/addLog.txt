@@ -1,0 +1,1 @@
+addLog\nblog: author = lkjtext = jklTitle = jkl\n
