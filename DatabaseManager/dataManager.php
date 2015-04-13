@@ -15,7 +15,7 @@ abstract class DataManager{
 			$this->conString = $connString.DBPORT;
 		}
 		$this->user=DBUSER;
-		$this->passWord=DBPASSWRD;
+		$this->passWord=DBPASSWORD;
 	}
 	
 	//connect to the db

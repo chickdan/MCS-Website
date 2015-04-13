@@ -1,16 +1,17 @@
 <?php
-   // URL or IP number of database server.
-   define('DBHOST', 'mcs.drury.edu');
-   
-   // Port the database server is using.
-   define('DBPORT', '');  
-   
-   // Name of the database (ie. the schema).
-   define('DBNAME','mcs_asciiu2');
-   
-   // Account of to use when connecting to the database.
-   define('DBUSER','asciiu2');
-   
-   // Password of account to use when connecting
-   define('DBPASSWRD', 'letmein!');
+	// url or ip of the the database server
+	define('DBHOST', 'mcs.drury.edu');
+	
+	// the port being used by the database
+	define('DBPORT', '3306');
+	
+	// name of the port used by the database
+	define('DBNAME', 'mcs-web');
+	
+	//username of the account connecting to the db
+	define ('DBUSER', 'mcswebadmin');
+	
+	//password for the account logging into the db
+	define('DBPASSWORD', 'letmein!');
+
 ?>

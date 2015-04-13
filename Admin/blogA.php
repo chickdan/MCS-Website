@@ -31,11 +31,11 @@
 					alert(data);
 				});
 				
-				/*$.ajax({ url: "/~jpolodna/MCS-Website/addBlog.php",
+				$.ajax({ url: "addBlog.php",
 						data: $("#addMenu").serialize(),
 						async: true,
-						type: GET
-				});*/
+						type: POST
+				});
 				/*check.done(function(data){
 				alert('add worked'.data)});
 				
@@ -59,12 +59,12 @@
 			</div>
 			</div>
 			
-			<div class="row">
+			<!--<div class="row">
 			<div class = "form-group col-lg-3 col-lg-offset-2">
 				<label for="author">Author</label>
 				<input type = "text" class="form-control" name="author" id="author" placeholder="Enter Blog Author"/>
 			</div>
-			</div>
+			</div>-->
 			
 			<!--<div class="row">
 			<div class = "form-group col-lg-3">
@@ -76,7 +76,7 @@
 			<div class="row">
 			<div class = "form-group col-lg-10 col-lg-offset-2">
 				<label for="text">Blog Text</label>
-				<textarea class = "form-control" name="text" id = "text" rows = "4" placeholder="Enter the body of the blog here"></textarea>
+				<textarea class = "form-control" name="body" id = "body" rows = "4" placeholder="Enter the body of the blog here"></textarea>
 			</div>
 			</div>
 			<div class="row">

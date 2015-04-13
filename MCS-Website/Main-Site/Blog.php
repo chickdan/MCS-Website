@@ -35,7 +35,7 @@
 	<?php
 		$servername = DBHOST;
 		$username = DBUSER;
-		$password = DBPASSWRD;
+		$password = DBPASSWORD;
 		$dbname = DBNAME;
 		
 		//create a connection
@@ -45,7 +45,7 @@
 			die("Connection failed: ".$conn->connect_error);
 		}
 		
-		$sql = "select blog_title, blog_author, blog_text from blog"; //, blog_date
+		$sql = "select title, body from blog"; //, blog_date
 		$result = $conn->query($sql);
 		
 		if($result->num_rows > 0){
@@ -57,8 +57,8 @@
 				echo '<article class = "blog-post">';
 				echo '<div class="panel">';
 				echo '<div class = "col-md-8">';
-				echo '<h2 class="blog-title">'.$row['blog_title'].'</h2>';
-				echo '<div class="blog-post-meta">'/*.$row['blog_date']*/." by ".$row['blog_author'].'</div>'; 
+				echo '<h2 class="blog-title">'.$row['title'].'</h2>';
+				echo '<div class="blog-post-meta">'/*.$row['blog_date']*/." by ".$row['author'].'</div>'; 
 				echo '<p id="bbody">'.$row['blog_text'].'</p>';
 				echo '</div>';
 				echo '</article>';

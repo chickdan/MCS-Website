@@ -4,29 +4,29 @@
 </head>
 <body>
 	<?php
-		include 'DatabaseManager/blogManager.php';
-		include_once dirname(__FILE__).'/siteModel/blog.class.php';
+		include 'DatabaseManager/mediaManager.php';
+		include_once dirname(__FILE__).'/siteModel/media.class.php';
 		
 		$file = 'addLog.txt';
 		$h = fopen($file, 'w');
 		fwrite($h, 'addLog\n');
 		
-		$blogManager = new blogManager();
+		$mediaManager = new mediaManager();
 		
 		$bloge;
-		if (isset($_POST['author'])) {
-			$bloge = new Blog($_POST['author'], $_POST['text'], $_POST['title']); //$_POST['blogDate'],
+		if (isset($_POST['title'])) {
+			$bloge = new Blog($_POST['title'], $_POST['body']); //$_POST['blogDate'], $_POST['author'], 
 		}
 		else {
 			$bloge = null;
 		}
-		$author = $bloge->getAuthor();
+		//$author = $bloge->getAuthor();
 		$title = $bloge->getTitle();
-		$text = $bloge->getText();
-		$var = 'blog: author = ' . $author . 'text = ' . $text . 'Title = ' . $title . '\n';
+		$text = $bloge->getBody();
+		$var = 'Title = ' . $title . 'body = ' . $body . '\n';
 		fwrite($h, $var);
 		
-		$ok = $blogManager->insertBlog($bloge);
+		$ok = $mediaManager->insertBlog($bloge);
 		
 		//check on the insert, did it work?
 		if($ok){
